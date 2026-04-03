@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wellnessz.fitbody",
+      "sha256_cert_fingerprints": [
+        "91:03:20:FB:35:69:DE:DF:AD:2F:95:09:B8:F7:3A:2D:B0:36:53:3F:41:45:8B:96:0E:01:81:F9:97:D5:5A:FA"
+      ]
+    }
+  }
+]

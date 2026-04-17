@@ -44,9 +44,10 @@ export default function Hero() {
           {/* Right Section: Image + Overlay */}
           <div className="flex-1 relative w-full max-w-lg md:max-w-xl">
             <img
-              src="https://i.ytimg.com/vi/uOe2Z27sVl0/oar2.jpg?sqp=-oaymwEkCJgDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB&rs=AOn4CLBbjnYNzuVBmfnNtXZ4turZcMHQ1g"
+              src="/images/Client/client_1.jpg"
               alt="Hero"
-              className="w-full h-130 rounded-lg shadow-lg"
+              // className="w-full h-[400px] md:h-[520px] object-cover rounded-lg shadow-lg"
+              className="w-full h-[400px] md:h-[520px] object-cover object-top rounded-lg shadow-lg"
             />
 
             {/* White Info Box Overlay */}

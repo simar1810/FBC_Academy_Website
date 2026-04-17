@@ -20,6 +20,7 @@ const Footer = () => {
         {title:"Privacy Policy", href: "#"},
         {title: "Terms of Service", href :"#"},
         {title: "Disclaimer", href:"#"},
+        {title: "Refund Policy", href:"/RefundPolicy"},
     ]
 
     const router = useRouter();

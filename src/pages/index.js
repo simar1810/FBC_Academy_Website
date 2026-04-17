@@ -9,6 +9,7 @@ import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
 import { FaWhatsapp } from "react-icons/fa";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function Home() {
       <TransformationSection/>
       <AboutSection/>
       <ServicesSection/>
+      <TestimonialsSection/>
       <Footer/>
     </main>
     </>

@@ -42,12 +42,12 @@ export default function FounderHero() {
           {/* Right Section: Image + Overlay */}
           <div className="flex-1 relative w-full max-w-lg md:max-w-xl">
             <img
-              src="https://tse1.mm.bing.net/th/id/OIP.kngZbTwqqa3_1P91HJFxzAHaEb?pid=Api&P=0&h=180"
+              src="images/Client/client_5.jpg"
               alt="Hero"
-              className="w-full h-130 rounded-xl shadow-lg"
+              className="w-full h-130 rounded-xl shadow-lg object-contain"
             />
 
-             <div className="absolute inset-0 bg-black/50 rounded-xl"></div>
+             <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
 
             {/* White Info Box Overlay */}
             <div className="absolute bottom-6 left-6">

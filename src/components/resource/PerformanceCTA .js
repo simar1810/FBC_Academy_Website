@@ -1,43 +1,48 @@
 const PerformanceCTA = () => {
   return (
-    <section className="wfull py-20 px-4 md:px-10 flex justify-center">
+    <section className="w-full py-20 px-4 md:px-10 flex justify-center bg-white">
 
-      {/* Square Card */}
-      <div className="bg-[#1D4ED8] w-full max-w-6xl p-8 md:p-20 text-white">
+      {/* CENTER CARD */}
+      <div className="w-full max-w-2xl bg-[#1D4ED8] text-white rounded-2xl md:rounded-3xl p-8 md:p-12 shadow-lg">
 
-        {/* Heading */}
-        <h2 className="text-xl md:text-4xl font-playfair font-semibold leading-snug">
-          Performance Intelligence,<br />
-          delivered.
+        {/* HEADING */}
+        <h2 className="text-2xl md:text-4xl font-playfair font-semibold text-center">
+          Claim your toolkit today
         </h2>
 
-        {/* Subtext */}
-        <p className="mt-4 text-sm md:text-base text-white/90 leading-relaxed max-w-2xl">
-          Join 25,000+ high achievers receiving weekly breakdowns of clinical research and <br />
-          field-tested performance strategies.
-        </p>
+        {/* INPUTS */}
+        <div className="mt-8 flex flex-col md:flex-row gap-4">
 
-        {/* Input + Button */}
-        <div className="mt-8 flex flex-col md:flex-row gap-4 md:items-center">
-
-          {/* Input */}
+          {/* NAME */}
           <input
-            type="email"
-            placeholder="professional@email.com"
-            className="w-full md:w-[420px] bg-white/10 border border-white/50 px-4 py-3 text-white placeholder-white/70 outline-none flex-none"
+            type="text"
+            placeholder="Your Name"
+            className="w-full md:w-1/2 bg-white/10 border border-white/40 px-4 py-3 text-white placeholder-white/70 outline-none rounded-xl"
           />
 
-          {/* Button */}
-          <button className="bg-white text-[#1D4ED8] px-6 py-3 font-medium whitespace-nowrap hover:bg-white/90 transition">
-            JOIN ARCHIVE
-          </button>
+          {/* EMAIL */}
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="w-full md:w-1/2 bg-white/10 border border-white/40 px-4 py-3 text-white placeholder-white/70 outline-none rounded-xl"
+          />
 
         </div>
+
+        {/* BUTTON */}
+        <button className="w-full mt-6 bg-white text-[#1D4ED8] py-3 font-medium rounded-xl hover:bg-white/90 transition">
+          Send my free ebook
+        </button>
+
+        {/* FOOTNOTE */}
+        <p className="mt-4 text-xs text-white/80 text-center">
+          INSTANT DELIVERY VIA WHATSAPP AND EMAIL
+        </p>
 
       </div>
 
     </section>
-  )
-}
+  );
+};
 
-export default PerformanceCTA
+export default PerformanceCTA;

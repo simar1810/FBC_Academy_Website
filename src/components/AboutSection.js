@@ -9,9 +9,10 @@ export default function AboutSection() {
         {/* Left: Image + Stats */}
         <div className="flex-1 relative">
           <img
-            src="https://tse1.mm.bing.net/th/id/OIP.kngZbTwqqa3_1P91HJFxzAHaEb?pid=Api&P=0&h=180"
+            src="/images/Client/client_2.jpg"
             alt="About Image"
-            className="w-full h-100 object-cover rounded-md"
+            // className="w-full h-100 object-cover rounded-md"
+            className="w-full h-[400px] md:h-[520px] object-cover object-top rounded-lg shadow-lg"
           />
 
           {/* Small Stats Box */}

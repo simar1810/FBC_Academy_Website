@@ -151,18 +151,28 @@ const tabs = [
 ]
 
 const images = [
-  "/images/gallery_1.avif",
-  "/images/gallery_2.jpg",
-  "/images/gallery_3_1.webp",
-  "/images/gallery_3_2.jpg",
-  "/images/gallery_4.webp",
-  "/images/galley_5.jpg",
-  "/images/gallery_10.png",
-  "/images/gallery_11.png",
-  "/images/gallery_12.png",
-  "/images/gallery_13.png",
-  "/images/gallery_14.png",
-  "/images/gallery_15.png",
+  "/images/gallery/gallery_1.jpg",
+  "/images/gallery/gallery_2.png",
+  "/images/gallery/gallery_3.jpg",
+  "/images/gallery/gallery_4.jpg",
+  "/images/gallery/gallery_5.jpg",
+  "/images/gallery/gallery_6.jpg",
+  "/images/gallery/gallery_7.jpg",
+  "/images/gallery/gallery_8.jpg",
+  "/images/gallery/gallery_9.jpg",
+  "/images/gallery/gallery_10.jpg",
+  "/images/gallery/gallery_11.jpg",
+  "/images/gallery/gallery_12.jpg",
+  "/images/gallery/gallery_13.jpg",
+  "/images/gallery/gallery_14.jpg",
+  "/images/gallery/gallery_15.jpg",
+  "/images/gallery/gallery_16.jpg",
+  "/images/gallery/gallery_17.jpg",
+  "/images/gallery/gallery_18.jpg",
+  "/images/gallery/gallery_19.jpg",
+  "/images/gallery/gallery_20.jpg",
+  "/images/gallery/gallery_21.jpg",
+  "/images/gallery/gallery_22.jpg",
 ]
 
 const GalleryHero = () => {
@@ -173,6 +183,13 @@ const GalleryHero = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-10 py-10">
+
+      {/* ✅ HEADING ADDED (NO DESIGN CHANGE) */}
+      <div className=" mt-5 mb-10 md:mb-14">
+        <h2 className="text-3xl md:text-5xl font-bold font-playfair">
+        Client <span className="text-[#1142D4]">Transformations</span>
+        </h2>
+      </div>
 
       {/* Tabs */}
       {/* <div className="overflow-x-auto mb-8">
@@ -202,15 +219,14 @@ const GalleryHero = () => {
 
         {visibleImages.map((img, index) => {
 
-          // keep your mosaic logic ONLY for desktop
           const pattern = index % 6
 
           let className = "overflow-hidden"
 
-          // 📱 MOBILE (ALL SAME)
+          // 📱 MOBILE
           className += " h-[240px]"
 
-          // 💻 DESKTOP MOSAIC ONLY
+          // 💻 DESKTOP MOSAIC
           if (pattern === 0) {
             className += " md:col-span-2 md:row-span-2 md:h-auto"
           } 

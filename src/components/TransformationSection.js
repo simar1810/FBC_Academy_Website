@@ -10,7 +10,7 @@ export default function TransformationSection() {
       <div className="flex-1 relative min-h-[300px] md:min-h-[80vh]">
         {/* Background image */}
         <Image
-          src="/images/transformation.avif" // replace with your image path
+          src="/images/Client/client_3.png" // replace with your image path
           alt="Wellness Background"
           fill
           className="object-cover"

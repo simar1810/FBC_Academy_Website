@@ -1,8 +1,10 @@
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
 import EliteBlueprints from "@/components/resource/EliteBlueprints"
+import FitnessPartnerSection from "@/components/resource/FitnessPartnerSection "
 import LatestResearch from "@/components/resource/LatestResearch"
 import PerformanceCTA from "@/components/resource/PerformanceCTA "
+import ProvenBlueprints from "@/components/resource/ProvenBlueprints "
 import ResourcesHero from "@/components/resource/ResourcesHero"
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -30,7 +32,9 @@ const Resources = () =>
             <ResourcesHero/>
             <LatestResearch/>
             <EliteBlueprints/>
+            <ProvenBlueprints/>
             <PerformanceCTA/>
+            <FitnessPartnerSection/>
             <Footer/>
           </main>
         </>

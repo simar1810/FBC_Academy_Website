@@ -27,16 +27,19 @@ const LatestResearch = () => {
     <section className="max-w-7xl mx-auto px-4 md:px-10 py-20">
 
       {/* Header */}
-      <div className="flex items-center justify-between gap-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
 
-        <h2 className="text-sm md:text-2xl font-playfair font-semibold">
-          Latest Research
-        </h2>
+        <div className="flex flex-col gap:6">
+           <h2 className="text-2xl md:text-3xl font-playfair font-semibold">
+             Insights & Articles (Blogs)
+           </h2>
 
-        <div className="flex-1 h-px bg-gray-300 mx-4"></div>
+           <span className="text-sm text-[#44474E] mt-5 text-left sm:text-right">Moving beyond surface level hacks to understand "Why" behind your body.</span>
+        </div>
 
-        <p className="text-xs md:text-base text-[#1142D4] cursor-pointer hover:text-[#1142D4] transition">
-          BROWSE ALL ARTICLES
+
+        <p className="text-xs  text-[#1142D4] cursor-pointer hover:text-[#1142D4] transition">
+          BROWSE ALL ARTICLES LATEST ARTICLES TO <br/> BUILD YOUR FITNESS LITERACY.
         </p>
       </div>
 

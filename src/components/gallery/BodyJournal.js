@@ -8,13 +8,19 @@ const BodyJournal = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
         {/* Left Image */}
-        <div className="h-[300px] md:h-[420px] rounded-lg overflow-hidden">
-          <img
-            src="/images/gallery_6.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
-        </div>
+       <div className="relative h-[300px] md:h-[420px] rounded-lg overflow-hidden">
+  
+           {/* Image */}
+           <img
+             src="/images/Client/client_6.jpg"
+             alt=""
+             className="w-full h-full object-cover"
+           />
+
+           {/* Dark Overlay */}
+           <div className="absolute inset-0 bg-black/40"></div>
+
+       </div>
 
         {/* Right Content */}
         <div className="space-y-5">
@@ -41,10 +47,10 @@ const BodyJournal = () => {
       </div>
 
       {/* 🔹 Bottom Gallery */}
-      <div>
+      {/* <div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 items-start">
 
-          {/* Image 1 */}
+         
           <div className="h-[250px] md:h-[300px] rounded-lg overflow-hidden">
             <img
               src="/images/gallery_7.jpg"
@@ -53,7 +59,7 @@ const BodyJournal = () => {
             />
           </div>
 
-          {/* Image 2 */}
+          
           <div className="h-[250px] md:h-[300px] rounded-lg overflow-hidden">
             <img
               src="/images/gallery_8.jpg"
@@ -62,7 +68,7 @@ const BodyJournal = () => {
             />
           </div>
 
-          {/* Image 3 (Tall + Button Inside) */}
+          
           <div className="relative h-[320px] md:h-[360px] rounded-lg overflow-hidden">
             <img
               src="/images/gallery_9.jpg"
@@ -70,10 +76,10 @@ const BodyJournal = () => {
               className="w-full h-full object-cover"
             />
 
-            {/* Optional dark overlay */}
+            
             <div className="absolute inset-0 bg-black/20" />
 
-            {/* Center Button */}
+            
             <div className="absolute inset-0 flex items-center justify-center">
               <button className="bg-white/90 backdrop-blur-md rounded-md px-6 py-3 text-sm shadow-md hover:scale-105 transition">
                 Load more archives
@@ -82,7 +88,7 @@ const BodyJournal = () => {
           </div>
 
         </div>
-      </div>
+      </div> */}
 
     </section>
   )

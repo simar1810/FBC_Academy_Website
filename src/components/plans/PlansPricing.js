@@ -23,7 +23,7 @@ export default function PlansPricing() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-7xl">
         
         {/* CARD 1 */}
-        <div className="border rounded-2xl p-6 flex flex-col justify-between">
+        <div className="border-2 border-[#67bc2a] rounded-2xl p-6 flex flex-col justify-between">
           
           {/* Header */}
           <div className="flex justify-between items-start mb-6">
@@ -53,7 +53,7 @@ export default function PlansPricing() {
           </ul>
 
           {/* Button */}
-          <button className="bg-[#0F172A] text-white py-3 rounded-md cursor-pointer">
+          <button className="bg-[#67bc2a] text-white py-3 rounded-md cursor-pointer">
             Start Now
           </button>
         </div>
@@ -99,7 +99,7 @@ export default function PlansPricing() {
         </div>
 
         {/* CARD 3 */}
-        <div className="border rounded-2xl p-6 flex flex-col justify-between">
+        <div className="border-2 border-[#67bc2a] rounded-2xl p-6 flex flex-col justify-between">
           
           {/* Header */}
           <h3 className="font-semibold text-lg mb-6">
@@ -127,13 +127,13 @@ export default function PlansPricing() {
 
 
           {/* Button */}
-          <button className="bg-white border text-black py-3 rounded-md cursor-pointer">
+          <button className="bg-[#67bc2a] border text-white py-3 rounded-md cursor-pointer">
             Start Now
           </button>
         </div>
 
         {/* CARD 4 */}
-        <div className="border rounded-2xl p-6 flex flex-col justify-between">
+        <div className="border-2 border-[#67bc2a] rounded-2xl p-6 flex flex-col justify-between">
           
           {/* Header */}
           <div className="flex justify-between items-start mb-6">
@@ -165,8 +165,8 @@ export default function PlansPricing() {
           </ul>
 
           {/* Button */}
-          <button className="bg-[#0F172A] text-white py-3 rounded-md cursor-pointer">
-            Apply Now
+          <button className="bg-[#67bc2a] text-white py-3 rounded-md cursor-pointer">
+            Start Now
           </button>
         </div>
 

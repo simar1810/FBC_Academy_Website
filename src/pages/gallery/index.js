@@ -1,7 +1,9 @@
 import Footer from "@/components/Footer"
 import BodyJournal from "@/components/gallery/BodyJournal"
+import CandidSection from "@/components/gallery/CandidSection"
 import GalleryHero from "@/components/gallery/GalleryHero"
 import LimitedAvailability from "@/components/gallery/LimitedAvailability"
+import MediaSection from "@/components/gallery/MediaSection"
 import Navbar from "@/components/Navbar"
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -26,7 +28,9 @@ const Gallery = () =>
           <main className="pt-16">
             <GalleryHero/>
             <BodyJournal/>
+            <CandidSection/>
             <LimitedAvailability/>
+            <MediaSection/>
             <Footer/>
           </main>
         </>

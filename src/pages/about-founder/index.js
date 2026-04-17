@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar'
 import EvolveSection from '@/components/founder/EvolveSection'
 import React from 'react'
 import { FaWhatsapp } from 'react-icons/fa';
+import AchievementsSection from '@/components/founder/AchievementsSection'
 
 const AboutFounder = () => {
   return (
@@ -29,6 +30,7 @@ const AboutFounder = () => {
         <GlobalAuthority/>
         <MissionSection/>
         <EvolveSection/>
+        <AchievementsSection/>
         <Footer/>
       </main>
     </>

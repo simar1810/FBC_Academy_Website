@@ -26,7 +26,7 @@ const AchievementsSection = () => {
     <section className="py-24 bg-white">
       
       {/* HEADER */}
-      <div className="w-full mb-16 px-6 md:px-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div className="text-center w-full mb-16 px-6 md:px-16 flex flex-col items-center justify-center gap-6">
         <div className="flex flex-col gap-2">
           <h2 className="text-4xl font-bold font-playfair">
             Founder <span className="text-[#67bc2a]">Achievements</span>

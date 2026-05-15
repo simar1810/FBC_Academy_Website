@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const images = [
   "/images/candid/candid_1.jpg",
@@ -21,24 +22,34 @@ const images = [
 
 export default function CandidSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white overflow-hidden">
       
       {/* HEADING */}
-      <div className="text-center mb-12 px-4">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12 px-4"
+      >
         <h2 className="text-3xl md:text-5xl font-bold font-playfair">
           Unfiltered <span className="text-[#67bc2a]">Moments</span> of Transformation
         </h2>
         <p className="text-gray-500 mt-4">
           Real people. Real journeys. Captured as they happened.
         </p>
-      </div>
+      </motion.div>
 
       {/* GRID */}
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
         {images.map((src, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
             key={index}
-            className="relative rounded-xl overflow-hidden group"
+            className="relative rounded-xl overflow-hidden group shadow-md"
           >
             <Image
               src={src}
@@ -49,8 +60,8 @@ export default function CandidSection() {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
-          </div>
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
+          </motion.div>
         ))}
       </div>
     </section>

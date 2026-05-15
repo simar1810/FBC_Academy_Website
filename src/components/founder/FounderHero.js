@@ -1,5 +1,6 @@
 // src/components/Hero.js
-import { FaPlay } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";  
+import Marquee from "react-fast-marquee";
 
 export default function FounderHero() {
   return (
@@ -71,13 +72,27 @@ export default function FounderHero() {
               </span>
 
          {/* Company Names */}
-              <div className="flex flex-wrap items-center justify-center gap-6">
+              {/* <div className="flex flex-wrap items-center justify-center gap-6">
                 <span className="text-gray-700 font-semibold">FORBES</span>
                 <span className="text-gray-700 font-semibold">GQ</span>
                 <span className="text-gray-700 font-semibold">MEN'S HEALTH</span>
                 <span className="text-gray-700 font-semibold">VOGUE</span>
                 <span className="text-gray-700 font-semibold">THE TIMES</span>
-              </div>
+              </div> */}
+              <div className="flex-1 overflow-hidden flex items-center">
+            <span className="text-gray-500 font-medium "></span>
+            <Marquee gradient={true} gradientColor={[244, 247, 246]} speed={40} className="flex items-center">
+              <img src="/forbes.png" alt="Forbes" className="mx-8 h-12 object-contain" />
+              <img src="/gq.png" alt="GQ" className="mx-8 h-12 object-contain" />
+              <img src="/menshealth.png" alt="Men's Health" className="mx-8 h-12 object-contain" />
+              <img src="/vogue.png" alt="Vogue" className="mx-8 h-12 object-contain" />
+              <img src="/thetimes.png" alt="The Times" className="mx-8 h-12 object-contain" />
+              <img src="/thetimesofindia.png" alt="The Times of India" className="mx-8 h-12 object-contain" />
+              <img src="/mid-day.png" alt="mid-day" className="mx-8 h-12 object-contain" />
+              <img src="/zee5.png" alt="ZEE5" className="mx-8 h-12 object-contain" />
+              <img src="/theprint.png" alt="The Print" className="mx-8 h-12 object-contain" />
+            </Marquee>
+          </div>
 
           </div>
        </div>

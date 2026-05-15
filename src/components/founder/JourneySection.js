@@ -4,8 +4,7 @@ export default function JourneySection() {
   return (
     <section className="w-full py-24 bg-gray-50 flex flex-col items-center text-center px-4 md:px-0">
 
-      {/* Vertical Orange Line */}
-      <div className="w-1 h-12 bg-[#67bc2a] mb-4 rounded"></div>
+     
 
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-playfair">

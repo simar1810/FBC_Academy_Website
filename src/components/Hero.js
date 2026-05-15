@@ -1,99 +1,120 @@
 // src/components/Hero.js
 import { FaPlay } from "react-icons/fa";
+import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 
 export default function Hero() {
   return (
-    <section className="bg-gray-50">
+    <section className="bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 py-16">
+        <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-12 py-16 items-center">
 
           {/* Left Section: Text */}
-          <div className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6 ">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6"
+          >
             {/* Headline */}
-            <h1 className=" font-playfair text-4xl sm:text-7xl font-bold leading-tight">
+            <h1 className="font-playfair text-4xl sm:text-7xl font-bold leading-tight">
               Own a High-<br />
               Performing <span className="text-[#1142D4]">Mind</span> <br />
               <span className="text-[#1142D4]"> & Body.</span>
             </h1>
 
-            {/* Sub-headline */}
-           <p className="text-base font-manrope md:text-sm text-gray-700 max-w-l mx-auto md:mx-0">
-              We simplify fitness for busy professionals.
-              Get elite results through practical, doable, and sustainable habits that work all year
-             round—without extreme dieting or lifestyle disruption.
+            <p className="text-lg font-medium text-gray-800">
+              For a better daily life, not just a better mirror.
+            </p>
 
+            {/* Sub-headline */}
+            <p className="text-base font-manrope md:text-sm text-gray-700 max-w-lg mx-auto md:mx-0">
+              Backed by 12 years of ground-level experience, we simplify fitness for busy professionals. 
+              Get elite results through practical, doable, and sustainable habits that work all year
+              round—without extreme dieting or lifestyle disruption.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center md:justify-start">
-              <a
-                href=""
-                className="bg-[#1142D4] text-white px-6 py-3 font-playfair rounded-md text-lg font-medium hover:bg-[#1142D4] transition"
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="#choose-path"
+                className="bg-[#1142D4] text-white px-6 py-3 font-playfair rounded-md text-lg font-medium hover:bg-blue-800 transition"
               >
                 I Want to Get Fit
-              </a>
-              <a
-                href=""
-                className=" text-white bg-[#67bc2a] px-6 py-3 font-playfair rounded-md text-lg font-medium transition"
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="#choose-path"
+                className="text-white bg-[#67bc2a] px-6 py-3 font-playfair rounded-md text-lg font-medium hover:bg-green-600 transition"
               >
                 Become an Elite Coach
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Section: Image + Overlay */}
-          <div className="flex-1 relative w-full max-w-lg md:max-w-xl">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="flex-1 relative w-full max-w-lg md:max-w-xl"
+          >
             <img
               src="/images/Client/client_1.jpg"
               alt="Hero"
-              // className="w-full h-[400px] md:h-[520px] object-cover rounded-lg shadow-lg"
               className="w-full h-[400px] md:h-[520px] object-cover object-top rounded-lg shadow-lg"
             />
 
             {/* White Info Box Overlay */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white/60 backdrop-blur-md rounded-lg px-4 py-3 flex items-center justify-between">
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+              className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md rounded-lg px-4 py-3 flex items-center justify-between shadow-lg"
+            >
               <div>
-                <p className="text-sm font-semibold text-[#1142D4] uppercase">Featured Success</p>
-                <div className="flex items-center gap-3 mt-1">
-                  {/* Circular Play Button */}
-                  <div className="w-8 h-8 flex items-center justify-center bg-[#1142D4] rounded-full">
-                    <FaPlay className="text-white text-sm" />
-                  </div>
-                  <span className="text-gray-800 font-medium text-sm">
-                    Transformation Story: CEO of Tech
-                  </span>
-                </div>
+                <p className="text-sm font-semibold text-[#1142D4] uppercase">Fitness Coach</p>
+                <h3 className="text-lg font-bold text-gray-800">Ankush Bhaskar</h3>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
         </div>
       </div>
 
       {/* Trust Strip (full width) */}
-      <div className="w-full bg-white border border-gray-300 py-6 mt-12">
+      <div className="w-full bg-[#f4f7f6] border-y border-gray-200 py-6 mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-10">
 
-          {/* Media Logos */}
-          <div className="flex flex-wrap items-center gap-4 justify-center md:justify-start">
-            <span className="text-gray-500 font-medium">As Featured In:</span>
-            <span className="text-gray-700 font-semibold">Times of India</span>
-            <span className="text-gray-700 font-semibold">Mid-day</span>
-            <span className="text-gray-700 font-semibold">ZEE5</span>
-            <span className="text-gray-700 font-semibold">The Print</span>
-         </div>
+          {/* Media Logos Marquee */}
+          <div className="flex-1 overflow-hidden flex items-center">
+            <span className="text-gray-500 font-medium whitespace-nowrap mr-6">As Featured In:</span>
+            <Marquee gradient={true} gradientColor={[244, 247, 246]} speed={40} className="flex items-center">
+              <img src="/thetimesofindia.png" alt="The Times of India" className="mx-8 h-12 object-contain" />
+              <img src="/mid-day.png" alt="mid-day" className="mx-8 h-12 object-contain" />
+              <img src="/zee5.png" alt="ZEE5" className="mx-8 h-12 object-contain" />
+              <img src="/theprint.png" alt="The Print" className="mx-8 h-12 object-contain" />
+            </Marquee>
+          </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap items-center gap-6 justify-center md:justify-end text-gray-700">
-
-            <div className="flex flex-col items-center gap-1">
-                <h3 className="text-indigo-600 font-bold text-lg">1,000+</h3>
-                <span className="text-sm">Happy Clients</span>
+          <div className="flex flex-wrap items-center gap-6 justify-center md:justify-end text-gray-700 whitespace-nowrap">
+            <div className="flex flex-col items-center gap-1 border-r border-gray-300 pr-6">
+                <h3 className="text-black font-bold text-lg">1,000+</h3>
+                <span className="text-sm font-medium">Clients</span>
             </div>
-
+            <div className="flex flex-col items-center gap-1 border-r border-gray-300 pr-6">
+                <h3 className="text-black font-bold text-lg">12+ Years</h3>
+                <span className="text-sm font-medium">Experience</span>
+            </div>
+            <div className="flex flex-col items-center gap-1 border-r border-gray-300 pr-6">
+                <h3 className="text-black font-bold text-lg text-center">Internationally<br/>Accredited</h3>
+            </div>
             <div className="flex flex-col items-center gap-1">
-                <h3 className="text-orange-600 font-bold text-lg">12,000+ Years</h3>
-                <span className="text-sm">Elite Experience</span>
+                <h3 className="text-black font-bold text-lg">Fitness Author</h3>
             </div>
           </div>
         </div>

@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import { FiActivity, FiHeart, FiZap, FiExternalLink, FiCheckCircle } from "react-icons/fi";
-import { FiRefreshCw,FiShield, FiStar, FiTrendingUp, FiMove, FiEye, FiBriefcase  } from "react-icons/fi";
-
+import { FiActivity, FiRefreshCw, FiShield, FiStar, FiTrendingUp, FiMove, FiEye, FiBriefcase, FiExternalLink, FiCheckCircle } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -42,7 +41,7 @@ const ServicesSection = () => {
     {
       title: "Physical Performance",
       description:
-        "Doubled deadlift strength 2x — from 60kg to 120kg - using only home-based workouts.",
+        "Doubled deadlift strength from 60kg to 120kg using home-based workouts.",
       icon: <FiTrendingUp  className="w-8 h-8" />,
       color: "bg-cyan-50",
       iconColor: "text-[#67bc2a]",
@@ -51,7 +50,7 @@ const ServicesSection = () => {
     {
       title: "Elite Performance",
       description:
-        "Guided individual to complete 100km Himalayan Treks and double their strength—all through strategic training.",
+        "Guided individual to complete 100km Himalayan Treks and double their strength—all through strategic training and nutrition.",
       icon: <FiStar  className="w-8 h-8" />,
       color: "bg-cyan-50",
       iconColor: "text-[#67bc2a]",
@@ -60,7 +59,7 @@ const ServicesSection = () => {
     {
       title: "Mobility & Longevity",
       description:
-        "Lost 25 kgs, significantly improved bone health, and restored painfree knee mobility.",
+        "Lost 25 kgs, significantly improved bone health, and restored pain-free knee mobility for a high-level Pharma Executive.",
       icon: <FiMove  className="w-8 h-8" />,
       color: "bg-cyan-50",
       iconColor: "text-[#67bc2a]",
@@ -69,7 +68,7 @@ const ServicesSection = () => {
     {
       title: "Aesthetic Excellence",
       description:
-        "Achieved a dream body transformation for an Actor & Model, maintaining a stage-ready.",
+        "Achieved a \"dream body\" transformation for an Actor & Model, maintaining a stage-ready, shredded physique all year round.",
       icon: <FiEye  className="w-8 h-8" />,
       color: "bg-cyan-50",
       iconColor: "text-[#67bc2a]",
@@ -78,7 +77,7 @@ const ServicesSection = () => {
     {
       title: "Corporate Athlete",
       description:
-        "Achieved a physical transformation while balancing a demanding schedule as a Business Analyst.",
+        "Achieved a complete physical transformation while balancing a demanding schedule as a Business Analyst at JP Morgan.",
       icon: <FiBriefcase className="w-8 h-8" />,
       color: "bg-cyan-50",
       iconColor: "text-[#67bc2a]",
@@ -87,50 +86,63 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white overflow-hidden">
       {/* Header */}
-      <div className="w-full mb-16 px-6 md:px-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <div className="text-sm md:text-md flex flex-col gap-2">
-          <h2 className="text-4xl font-bold font-playfair">
-            The Data-Backed <span className="text-[#67bc2a]">Proof</span>
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="w-full mb-16 px-6 md:px-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+      >
+        <div className="text-sm md:text-md flex flex-col gap-3">
+          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-900">
+            Real Results. <span className="text-[#67bc2a]">Real People.</span> Real Reversals.
           </h2>
-          <p>
-            Clinical-level results through lifestyle optimization, not
-            pharmaceutical shortcuts.
+          <p className="text-gray-600 text-lg max-w-2xl">
+            We don't just track weight; we track quality of life. From C-Suite executives to "Household CEOs," here is the evidence of the FBC Method in action.
           </p>
         </div>
 
-        <div className="flex items-center justify-between md:justify-end gap-4 w-full md:w-auto">
+        <div className="flex items-center justify-between md:justify-end gap-4 w-full md:w-auto mt-4 md:mt-0">
           <a
-            href="#case-studies"
-            className="px-4 py-2 text-sm bg-indigo-50 text-black flex items-center gap-2 rounded-md hover:bg-indigo-100 transition"
+            href="/gallery/transformations"
+            className="px-6 py-3 text-sm font-semibold bg-[#1142D4] text-white flex items-center gap-2 rounded-md hover:bg-blue-800 transition shadow-md"
           >
             View all case studies <FiExternalLink className="w-4 h-4" />
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Slider */}
-      <div className="container mx-auto px-4">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="container mx-auto px-4"
+      >
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={20}
+          spaceBetween={24}
           loop={true}
           autoplay={{
-           delay: 1000,              // 👈 makes it continuous
+           delay: 0,              // continuous
            disableOnInteraction: false,
           }}
-          speed={3000} 
+          speed={4000} 
           breakpoints={{
             320: { slidesPerView: 1 },
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            640: { slidesPerView: 1.5 },
+            768: { slidesPerView: 2.5 },
+            1024: { slidesPerView: 3.5 },
+            1280: { slidesPerView: 4.5 },
           }}
+          className="pb-4"
         >
           {reasons.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="p-8 rounded-3xl border shadow-xl mb-2 border-gray-100 transition-all duration-300  hover:-translate-y-2 group h-full">
+            <SwiperSlide key={index} className="h-auto">
+              <div className="p-8 rounded-2xl border shadow-lg mb-2 border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group h-full bg-white flex flex-col">
                 
                 {/* Icon */}
                 <div
@@ -140,15 +152,15 @@ const ServicesSection = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold mb-4 font-playfair">
+                <h3 className="text-xl font-bold mb-3 font-playfair text-gray-900">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-500">{item.description}</p>
+                <p className="text-gray-600 flex-grow text-sm leading-relaxed">{item.description}</p>
 
                 {/* Footer */}
-                <p className="flex gap-2 text-gray-400 text-xs mt-4 mb-3">
+                <p className="flex items-center gap-2 text-[#1142D4] font-medium text-xs mt-6 pt-4 border-t border-gray-100">
                   <FiCheckCircle className="w-4 h-4" />
                   {item.verification}
                 </p>
@@ -156,7 +168,7 @@ const ServicesSection = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </motion.div>
     </section>
   );
 };

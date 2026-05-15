@@ -2,6 +2,7 @@ import ContactHero from "@/components/contact/ContactHero";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar"
 import { FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const ContactUs = () =>{
     return(
@@ -9,8 +10,7 @@ const ContactUs = () =>{
           <Navbar/>
 
           <a
-            // href="https://wa.me/9625691566?text=Hey%2C%20I%27m%20here%20from%20your%20website%21"
-            href = "#"
+            href="https://wa.me/919923646881?text=Hey%2C%20I%27m%20interested%20in%20your%20coaching%20programs%21"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed right-4 bottom-12 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-50"
@@ -19,8 +19,10 @@ const ContactUs = () =>{
             <FaWhatsapp className="w-6 h-6" />
         </a>
 
-          <main className="pt-16">
-            <ContactHero/>
+          <main className="pt-16 overflow-hidden">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6 }}>
+              <ContactHero/>
+            </motion.div>
             <Footer/>
           </main>
 

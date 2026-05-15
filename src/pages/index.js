@@ -10,6 +10,7 @@ import ServicesSection from "@/components/ServicesSection";
 import Footer from "@/components/Footer";
 import { FaWhatsapp } from "react-icons/fa";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import MediaSection from "@/components/gallery/MediaSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,29 +25,29 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <>
-    <Navbar/>
+      <Navbar />
 
-    <a
-        // href="https://wa.me/9625691566?text=Hey%2C%20I%27m%20here%20from%20your%20website%21"
-        href = "#"
+      <a
+        href="https://wa.me/919923646881?text=Hey%2C%20I%27m%20interested%20in%20your%20coaching%20programs%21"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed right-4 bottom-12 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-50"
         aria-label="Chat on WhatsApp"
       >
         <FaWhatsapp className="w-6 h-6" />
-    </a>
+      </a>
 
-    <main className="pt-16">
-      <Hero/>
-      <WhyPlansFail/>
-      <BodyReset/>
-      <TransformationSection/>
-      <AboutSection/>
-      <ServicesSection/>
-      <TestimonialsSection/>
-      <Footer/>
-    </main>
+      <main className="pt-16">
+        <Hero />
+        <WhyPlansFail />
+        <BodyReset />
+        <TransformationSection />
+        <AboutSection />
+        <MediaSection />
+        <ServicesSection />
+        <TestimonialsSection />
+        <Footer />
+      </main>
     </>
   );
 }

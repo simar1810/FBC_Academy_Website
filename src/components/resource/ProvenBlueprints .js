@@ -1,4 +1,15 @@
+import { useState } from "react";
+import ResourceModal from "./ResourceModal";
+
 const ProvenBlueprints = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [resourceType, setResourceType] = useState("");
+
+  const handleOpenModal = (type) => {
+    setResourceType(type);
+    setIsModalOpen(true);
+  };
+
   return (
     <section className="w-full bg-white py-20">
 
@@ -17,7 +28,10 @@ const ProvenBlueprints = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12">
 
         {/* LEFT BLOCK */}
-        <div className="bg-[#F3F3F7] p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
+        <div 
+          onClick={() => handleOpenModal('pdf')}
+          className="bg-[#F3F3F7] p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center cursor-pointer hover:shadow-xl transition-shadow rounded-xl"
+        >
 
           {/* IMAGE */}
           <div className="w-full md:w-1/3 relative h-[220px] md:h-[180px] flex justify-center">
@@ -56,7 +70,10 @@ const ProvenBlueprints = () => {
         </div>
 
         {/* RIGHT BLOCK */}
-        <div className="bg-[#F3F3F7] p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center">
+        <div 
+          onClick={() => handleOpenModal('protocol')}
+          className="bg-[#F3F3F7] p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center cursor-pointer hover:shadow-xl transition-shadow rounded-xl"
+        >
 
           {/* IMAGE */}
           <div className="w-full md:w-1/3 relative h-[220px] md:h-[180px] flex justify-center">
@@ -96,6 +113,11 @@ const ProvenBlueprints = () => {
 
       </div>
 
+      <ResourceModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        resourceType={resourceType} 
+      />
     </section>
   );
 };

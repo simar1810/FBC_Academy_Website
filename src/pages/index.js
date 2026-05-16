@@ -40,12 +40,12 @@ export default function Home() {
       <main className="pt-16">
         <Hero />
         <WhyPlansFail />
+        <TestimonialsSection />
         <BodyReset />
         <TransformationSection />
         <AboutSection />
         <MediaSection />
         <ServicesSection />
-        <TestimonialsSection />
         <Footer />
       </main>
     </>

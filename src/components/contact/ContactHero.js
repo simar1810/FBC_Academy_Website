@@ -18,9 +18,30 @@ export default function ContactHero() {
    });
   }
 
-  const handleSubmit =(e) =>
+  const handleSubmit = async (e) =>
   {
     e.preventDefault();
+
+    try {
+      // TODO: Replace with your actual Google Sheets Web App URL
+      const GOOGLE_SHEETS_WEBHOOK_URL = "YOUR_GOOGLE_SHEETS_WEBHOOK_URL_HERE";
+
+      if (GOOGLE_SHEETS_WEBHOOK_URL !== "YOUR_GOOGLE_SHEETS_WEBHOOK_URL_HERE") {
+        await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            source: "Contact Us Page"
+          }),
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting to Google Sheets:", error);
+    }
 
     const message = "*New Discovery Form Submission*\n\n" +
     "*Name:* " + formData.name + "\n" +

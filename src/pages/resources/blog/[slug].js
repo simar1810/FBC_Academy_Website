@@ -89,12 +89,12 @@ export default function BlogPost() {
             initial={{ opacity: 0, scale: 0.95 }} 
             animate={{ opacity: 1, scale: 1 }} 
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="w-full h-[300px] md:h-[500px] relative mb-12 rounded-xl overflow-hidden shadow-md"
+            className="w-full h-[300px] md:h-[500px] relative mb-12 rounded-xl overflow-hidden shadow-md bg-gray-100 flex items-center justify-center"
           >
             <img
               src={post.image}
               alt={post.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </motion.div>
 

@@ -49,11 +49,13 @@ const LatestResearch = () => {
               <div className="flex flex-col bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow h-full w-full">
                 
                 {/* Image */}
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-[250px] object-cover"
-                />
+                <div className="w-full h-[250px] bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
 
                 {/* Text */}
                 <div className="p-6 flex flex-col flex-1">

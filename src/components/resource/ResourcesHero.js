@@ -40,9 +40,9 @@ const ResourcesHero = () => {
           <div className="p-0 flex items-start">
             <div className="w-full h-[90%] md:h-[540px] pr-0">
               <img
-                src="/images/resource_hero.jpeg"
+                src="/ank1.jpg"
                 alt="featured"
-                className="w-full h-full object-cover block"
+                className="w-full h-full object-cover object-top block"
               />
             </div>
           </div>

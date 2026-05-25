@@ -1,11 +1,29 @@
+import Image from "next/image";
+
 const videos = [
   {
-    id: "Video_1",  
-    title: "Podcast 1"
+    id: "TBV2pFjTleY",
+    title: "Tarun Sharma Show",
+    poster: "/tarun-sharma-poster.jpg",
+    url: "https://youtu.be/TBV2pFjTleY?si=KxPJIksHjr7YVq-C"
   },
   {
-    id: "Video_2",
-    title: "Podcast 2"
+    id: "9MSm_6pdKaE",
+    title: "Dream With Neeraj Podcast",
+    poster: "/dream-with-neeraj-poster.jpg",
+    url: "https://youtu.be/9MSm_6pdKaE?si=JxkdAXBQPhtp1yQd"
+  },
+  {
+    id: "zn77Kb9LK38",
+    title: "The Spotlight Podcast — Episode 1",
+    poster: "/the-spotlight-poster.jpg",
+    url: "https://youtu.be/zn77Kb9LK38?si=fVJhfTBy0iAJ5Cyb"
+  },
+  {
+    id: "4qcs8SXBczI",
+    title: "The Spotlight Podcast — Episode 2",
+    poster: "/the-spotlight-poster.jpg",
+    url: "https://youtu.be/4qcs8SXBczI?si=vY-9KWoaMiaROM_h"
   }
 ];
 
@@ -21,7 +39,7 @@ const EliteBlueprints = () => {
         </p>
 
         <h2 className="text-3xl md:text-6xl font-playfair font-semibold">
-          The Science of "Minimum Effective Dose"
+          Watch My Latest Podcast Appearances
         </h2>
 
         <p className="text-gray-600 max-w-4xl mx-auto text-sm md:text-base leading-relaxed">
@@ -32,43 +50,46 @@ const EliteBlueprints = () => {
 
       {/* VIDEOS */}
       <div className="max-w-7xl mx-auto px-4 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
           {videos.map((video, index) => (
             <a
               key={index}
-              href={`https://www.youtube.com/watch?v=${video.id}`}
+              href={video.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative group cursor-pointer"
+              className="group block overflow-hidden rounded-3xl shadow-xl bg-white transition hover:-translate-y-1"
             >
 
-              {/* THUMBNAIL */}
-              <img
-                src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-                alt={video.title}
-                className="w-full h-[300px] md:h-[350px]  object-cover rounded-md"
-              />
-
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-black/25 group-hover:bg-black/40 transition duration-300" />
-
-              {/* SQUARE PLAY BUTTON */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-md flex items-center justify-center
-                                backdrop-blur-md bg-white/30 border border-white/40
-                                group-hover:scale-110 transition duration-300">
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="white"
-                    viewBox="0 0 24 24"
-                    className="w-6 h-6 ml-1"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-
+              <div className="relative h-[300px] w-full">
+                <Image
+                  src={video.poster}
+                  alt={video.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/90 text-black shadow-lg transition group-hover:scale-110">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      className="w-7 h-7 ml-1"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
                 </div>
+              </div>
+
+              <div className="p-6">
+                <p className="text-sm text-gray-500 uppercase tracking-[0.24em] mb-2">
+                  YouTube Podcast
+                </p>
+                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+                  {video.title}
+                </h3>
               </div>
 
             </a>

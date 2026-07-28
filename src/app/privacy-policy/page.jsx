@@ -218,8 +218,8 @@ const PrivacyPolicy = () => {
             Transfer of Your Personal Data
           </h2>
           <p>
-            Your information, including Personal Data, may be transferred to —
-            and maintained on — computers located outside of Your jurisdiction
+            Your information, including Personal Data, may be transferred to
+            and maintained on computers located outside of Your jurisdiction
             where data protection laws may differ. By submitting information,
             You agree to such transfer.
           </p>

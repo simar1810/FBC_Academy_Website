@@ -50,7 +50,7 @@ const ServicesSection = () => {
     {
       title: "Elite Performance",
       description:
-        "Guided individual to complete 100km Himalayan Treks and double their strength—all through strategic training and nutrition.",
+        "Guided individual to complete 100km Himalayan Treks and double their strength, all through strategic training and nutrition.",
       icon: <FiStar  className="w-8 h-8" />,
       color: "bg-cyan-50",
       iconColor: "text-[#67bc2a]",

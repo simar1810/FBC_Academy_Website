@@ -30,7 +30,7 @@ export default function JourneySection() {
         demands. I saw clearly how traditional, extreme fitness advice puts too
         much burden on an already hectic schedule making it more complicated
         and tough to follow.Ultimately realising, if a system requires you to sacrifice your
-        career or your peace of mind to work, it isn’t a strategy—it’s a
+        career or your peace of mind to work, it isn’t a strategy, it’s a
         liability.
       </p>
 

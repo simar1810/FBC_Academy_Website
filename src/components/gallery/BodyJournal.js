@@ -50,7 +50,7 @@ const BodyJournal = () => {
           <p className="text-gray-600 text-sm md:text-base leading-relaxed">
             We track every metric, monitor every variable, and curate the
             <br className="hidden md:block"/>
-            path to your peak. This is not just fitness — it is engineering.
+            path to your peak. This is not just fitness: it is engineering.
           </p>
 
           <button className="text-[#1142D4] border-b-2 border-[#1142D4] pb-1 text-sm font-bold hover:opacity-80 transition">

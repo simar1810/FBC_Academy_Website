@@ -20,7 +20,7 @@ const plansData = [
       whatYouGet: [
         "7 Short, High-Impact Videos: Designed to give you the mental shift needed for fitness success in minutes a day.",
         "Daily Breakthrough Tasks: Simple activities to turn information into real, lasting change.",
-        "Two Premium eBooks by Ankush S. Bhaskar: \"Why 75% of Professionals Fail at Fitness\" and \"The Busy Professional’s Guide to Losing 5–10kg Without the Gym\"."
+        "Two Premium eBooks by Ankush S. Bhaskar: \"Why 75% of Professionals Fail at Fitness\" and \"The Busy Professional’s Guide to Losing 5-10kg Without the Gym\"."
       ],
       coreValue: "Absolute clarity over confusion through a 7-day psychological shift that makes fitness feel like a strategy, not a chore."
     }
@@ -58,7 +58,7 @@ const plansData = [
     color: "bg-blue-50 text-[#1142D4]",
     buttonColor: "bg-[#1142D4] hover:bg-blue-800",
     details: {
-      whatToExpect: "This is not a collection of random workout videos; it is a complete education and execution system built from over 12 years of ground-level coaching experience. You will cut through the noise of conflicting social media advice to master the core science of metabolism, nutrition, and workout design—learning more than your local gym trainer ever will. By mastering the \"Minimum Effective Dose,\" you will gain the power to manage your fitness during work travels, festivals, and hectic weeks, staying in peak shape all year round.",
+      whatToExpect: "This is not a collection of random workout videos; it is a complete education and execution system built from over 12 years of ground-level coaching experience. You will cut through the noise of conflicting social media advice to master the core science of metabolism, nutrition, and workout design, learning more than your local gym trainer ever will. By mastering the \"Minimum Effective Dose,\" you will gain the power to manage your fitness during work travels, festivals, and hectic weeks, staying in peak shape all year round.",
       whoItsFor: "The disciplined, self-driven professional who prefers depth and flexibility over constant hand-holding. If you travel frequently, have a hectic schedule, and want a science-backed system you can carry in your pocket without needing a 1-on-1 coach, this is for you.",
       whatYouGet: [
         "Full Recorded Curriculum: 7 Modules covering Exercise Science, Nutrition, Hormones, and Fat Loss fundamentals.",
@@ -67,7 +67,7 @@ const plansData = [
         "FBC App Access: Digital trackers, fitness tools and a complete progress-tracking system.",
         "Monthly Strategy Call: A 1-on-1-style group coaching session with Ankush to clarify doubts and course-correct."
       ],
-      coreValue: "Transitioning from \"guessing\" to \"knowing\" — investing in a lifelong skill set that frees you from the cycle of fitness influencers and fad diets forever."
+      coreValue: "Transitioning from \"guessing\" to \"knowing\": investing in a lifelong skill set that frees you from the cycle of fitness influencers and fad diets forever."
     }
   },
   {
@@ -80,7 +80,7 @@ const plansData = [
     color: "bg-blue-50 text-[#1142D4]",
     buttonColor: "bg-[#1142D4] hover:bg-blue-800",
     details: {
-      whatToExpect: "Our highest tier of coaching. You receive everything in the DIY curriculum but with the addition of personalized strategy, direct accountability, and continuous 1-on-1 feedback from Ankush. You don't have to think about \"What should I do today?\"—we handle the strategy so you can simply execute and reap the rewards of peak performance.",
+      whatToExpect: "Our highest tier of coaching. You receive everything in the DIY curriculum but with the addition of personalized strategy, direct accountability, and continuous 1-on-1 feedback from Ankush. You don't have to think about \"What should I do today?\" We handle the strategy so you can simply execute and reap the rewards of peak performance.",
       whoItsFor: "The time-poor executive or professional who needs an expert to take the wheel. If you are struggling with a lifestyle disorder, recovering from an injury, or simply need someone to handle the heavy lifting of adjusting your macros and workouts, this is your fastest route to success.",
       whatYouGet: [
         "Complete Customization: Tailored workouts, diet strategies, and habit prescriptions built around your work hours, injuries, and family life.",

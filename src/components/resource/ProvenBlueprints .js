@@ -50,7 +50,7 @@ const ProvenBlueprints = () => {
 
             <h3 className="text-xl md:text-2xl font-semibold leading-snug">
               Why 75% Professionals <br />
-              Fail at Fitness — And How to Fix It
+              Fail at Fitness: And How to Fix It
             </h3>
 
             <p className="text-sm text-gray-600">
@@ -92,7 +92,7 @@ const ProvenBlueprints = () => {
 
             <h3 className="text-xl md:text-2xl font-semibold leading-snug">
               The Busy Professional’s <br />
-              Guide to Losing 5–10kg <br /> (Without the Gym)
+              Guide to Losing 5-10kg <br /> (Without the Gym)
             </h3>
 
             <p className="text-sm text-gray-600">

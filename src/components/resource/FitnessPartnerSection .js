@@ -28,7 +28,7 @@ const FitnessPartnerSection = () => {
             Your Digital <br className="md:hidden" /> Fitness Partner.
           </h2>
           <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Download the FBC Academy app to experience the exact system my VIP clients use — high fidelity tracking meets high-performance science.
+            Download the FBC Academy app to experience the exact system my VIP clients use: high fidelity tracking meets high-performance science.
           </p>
         </motion.div>
 

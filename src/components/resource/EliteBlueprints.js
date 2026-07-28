@@ -15,13 +15,13 @@ const videos = [
   },
   {
     id: "zn77Kb9LK38",
-    title: "The Spotlight Podcast — Episode 1",
+    title: "The Spotlight Podcast: Episode 1",
     poster: "/the-spotlight-poster.jpg",
     url: "https://youtu.be/zn77Kb9LK38?si=fVJhfTBy0iAJ5Cyb"
   },
   {
     id: "4qcs8SXBczI",
-    title: "The Spotlight Podcast — Episode 2",
+    title: "The Spotlight Podcast: Episode 2",
     poster: "/the-spotlight-poster.jpg",
     url: "https://youtu.be/4qcs8SXBczI?si=vY-9KWoaMiaROM_h"
   }

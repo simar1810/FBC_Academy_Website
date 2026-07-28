@@ -39,14 +39,37 @@ export default function AboutSection() {
           
           <div className="space-y-4 text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
             <p>
-               I’m <strong>Ankush S. Bhaskar</strong>, an internationally accredited Fitness Coach, Author, and Mentor. My journey in the fitness industry isn't just about sets and reps—it's about building systems that survive the real world.
+               I'm <strong>Ankush S. Bhaskar</strong>, an internationally accredited Fitness Coach, Author, and Mentor. My journey in the fitness industry isn't just about sets and reps, it's about building systems that survive the real world.
             </p>
             <p>
-               Since 2014, I’ve coached clients across India and globally—from the USA to Dubai—helping busy professionals, CEOs, and actors reclaim their health. I don't sell temporary motivation; I build high-performing bodies and minds through Fitness Literacy.
+               Since 2014, I've coached clients across India and globally from the USA, Canada, Philippines to Dubai, helping busy professionals, CEOs, and actors reclaim their health.
             </p>
             <blockquote className="border-l-4 border-[#1142D4] pl-4 italic text-xl font-medium text-gray-800 my-6">
               "I believe fitness should support your life, not fight it."
             </blockquote>
+
+            <div className="space-y-3 text-left">
+              <h3 className="text-xl sm:text-2xl font-bold font-playfair text-gray-900">
+                Why My Approach is Different:
+              </h3>
+              <ul className="space-y-3 text-base sm:text-lg list-disc pl-5 marker:text-[#1142D4]">
+                <li>
+                  <strong>The Global Perspective:</strong> 12 years of hands-on coaching experience with diverse cultures and lifestyles in India, the USA, Canada, Dubai, and the Philippines.
+                </li>
+                <li>
+                  <strong>Medical & Performance Results:</strong> Beyond just "looking better," I help clients manage lifestyle markers like Type 2 Diabetes, Hypertension (High BP), PCOS, and Cholesterol.
+                </li>
+                <li>
+                  <strong>Athlete's Foundation, Professional's Strategy:</strong> I combine elite knowledge as a former National Athlete with 12 years of coaching busy professionals. I've learned exactly how to simplify complex science into a practical and doable fitness regime that survives a demanding schedule.
+                </li>
+                <li>
+                  <strong>An Author's Logic:</strong> As the author of the Total Body Re-Set and founder of Fit Body Culture, I am dedicated to helping you stop failing due to misinformation and unrealistic systems.
+                </li>
+              </ul>
+              <p className="font-semibold text-gray-900 pt-1">
+                I don't sell motivation. I build systems that work in real life.
+              </p>
+            </div>
           </div>
 
           {/* Link */}

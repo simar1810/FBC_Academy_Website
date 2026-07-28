@@ -59,7 +59,7 @@ export default function WhyPlansFail() {
                 <h3 className="text-lg font-semibold font-playfair text-white">The "Gym-Only" Mindset</h3>
               </div>
               <p className="text-gray-300 text-sm sm:text-base pl-9">
-                You are told that 5–6 days at the gym is the only way to get fit. But when a hectic work week or travel catches up, you miss a few sessions, feel like a failure, and quit—hoping for a "freer schedule" that never actually comes.
+                You are told that 5-6 days at the gym is the only way to get fit. But when a hectic work week or travel catches up, you miss a few sessions, feel like a failure, and quit, hoping for a "freer schedule" that never actually comes.
               </p>
             </motion.div>
 

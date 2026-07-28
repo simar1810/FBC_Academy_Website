@@ -1,5 +1,5 @@
 // src/components/WhyPlansFail.js
-import { FaDumbbell, FaUtensils, FaBolt } from "react-icons/fa";
+import { FaDumbbell, FaUtensils, FaBolt, FaLightbulb } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function WhyPlansFail() {
@@ -29,10 +29,17 @@ export default function WhyPlansFail() {
             <p className="text-gray-700 text-base sm:text-md text-justify font-medium">
               For a busy professional, fitness cannot be the top priority. It should be the tool that makes your actual priorities easier to handle.
             </p>
-            <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-[#1142D4]">
-              <p className="text-gray-800 text-base sm:text-md">
-                <strong>The Reality Check:</strong> Most professionals don't fail because they lack discipline. They fail because the "Indian Fitness Industry" is built on a broken, all-or-nothing mindset.
-              </p>
+            <div className="relative overflow-hidden rounded-lg border border-amber-200 bg-amber-50 p-4 sm:p-5 text-left">
+              <div className="absolute inset-y-0 left-0 w-1.5 bg-amber-400" aria-hidden="true" />
+              <div className="flex gap-3 pl-2">
+                <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-amber-400/20 text-amber-600">
+                  <FaLightbulb className="h-4 w-4" aria-hidden="true" />
+                </span>
+                <p className="text-gray-800 text-base sm:text-md">
+                  <strong className="text-amber-700">The Reality Check:</strong>{" "}
+                  Most professionals don't fail because they lack discipline. They fail because the "Indian Fitness Industry" is built on a broken, all-or-nothing mindset.
+                </p>
+              </div>
             </div>
           </motion.div>
 

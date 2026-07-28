@@ -1,5 +1,4 @@
 // src/components/Hero.js
-import { FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 
@@ -17,21 +16,22 @@ export default function Hero() {
             className="flex-1 flex flex-col justify-center text-center md:text-left space-y-6"
           >
             {/* Headline */}
+            <p className="text-sm sm:text-base font-medium text-gray-700 tracking-wide">
+              Internationally Accredited Fitness Coach | Fitness Educator | Author
+            </p>
             <h1 className="font-playfair text-4xl sm:text-7xl font-bold leading-tight">
-              Own a High-<br />
-              Performing <span className="text-[#1142D4]">Mind</span> <br />
-              <span className="text-[#1142D4]"> & Body.</span>
+              Ankush S <span className="text-[#1142D4]">Bhaskar</span>
             </h1>
 
             <p className="text-lg font-medium text-gray-800">
-              For a better daily life, not just a better mirror.
+            For A Better Day to Day Life. Not Just Better Looks.
             </p>
 
             {/* Sub-headline */}
             <p className="text-base font-manrope md:text-sm text-gray-700 max-w-lg mx-auto md:mx-0">
               Backed by 12 years of ground-level experience, we simplify fitness for busy professionals. 
               Get elite results through practical, doable, and sustainable habits that work all year
-              round—without extreme dieting or lifestyle disruption.
+              round, without extreme dieting or lifestyle disruption.
             </p>
 
             {/* CTA Buttons */}
@@ -39,7 +39,7 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#choose-path"
+                href="/plans"
                 className="bg-[#1142D4] text-white px-6 py-3 font-playfair rounded-md text-lg font-medium hover:bg-blue-800 transition"
               >
                 I Want to Get Fit
@@ -47,7 +47,7 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="#choose-path"
+                href="/plans#fitness-coach-launchpad"
                 className="text-white bg-[#67bc2a] px-6 py-3 font-playfair rounded-md text-lg font-medium hover:bg-green-600 transition"
               >
                 Become an Elite Coach
@@ -101,20 +101,21 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap items-center gap-6 justify-center md:justify-end text-gray-700 whitespace-nowrap">
-            <div className="flex flex-col items-center gap-1 border-r border-gray-300 pr-6">
-                <h3 className="text-black font-bold text-lg">1,000+</h3>
-                <span className="text-sm font-medium">Clients</span>
+          <div className="flex flex-wrap items-center gap-8 justify-center md:justify-end whitespace-nowrap md:border-l md:border-gray-300 md:pl-10">
+            <div className="flex flex-col items-center gap-0.5">
+                <h3 className="font-playfair text-3xl font-bold text-[#1142D4] leading-none">1,000+</h3>
+                <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">Clients</span>
             </div>
-            <div className="flex flex-col items-center gap-1 border-r border-gray-300 pr-6">
-                <h3 className="text-black font-bold text-lg">12+ Years</h3>
-                <span className="text-sm font-medium">Experience</span>
+            <div className="flex flex-col items-center gap-0.5">
+                <h3 className="font-playfair text-3xl font-bold text-[#1142D4] leading-none">12+</h3>
+                <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">Years Experience</span>
             </div>
-            <div className="flex flex-col items-center gap-1 border-r border-gray-300 pr-6">
-                <h3 className="text-black font-bold text-lg text-center">Internationally<br/>Accredited</h3>
+            <div className="hidden sm:block w-px h-10 bg-gray-300" aria-hidden="true" />
+            <div className="flex flex-col items-center gap-0.5">
+                <h3 className="text-sm font-bold text-gray-800 text-center leading-snug">Internationally<br/>Accredited</h3>
             </div>
-            <div className="flex flex-col items-center gap-1">
-                <h3 className="text-black font-bold text-lg">Fitness Author</h3>
+            <div className="flex flex-col items-center gap-0.5">
+                <h3 className="text-sm font-bold text-gray-800">Fitness Author</h3>
             </div>
           </div>
         </div>

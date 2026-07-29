@@ -11,6 +11,7 @@ import Footer from "@/components/Footer";
 import { FaWhatsapp } from "react-icons/fa";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import MediaSection from "@/components/gallery/MediaSection";
+import { ValorClassicBanner } from "@/components/founder/AchievementsSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,19 @@ export default function Home() {
         <BodyReset />
         <TransformationSection />
         <AboutSection />
+        <section className="py-16 md:py-20 bg-gray-50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#1142D4] mb-3">
+                National Stage
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-gray-900">
+                Valor Classic <span className="text-[#67bc2a]">Judge</span>
+              </h2>
+            </div>
+            <ValorClassicBanner />
+          </div>
+        </section>
         <MediaSection />
         <ServicesSection />
         <Footer />

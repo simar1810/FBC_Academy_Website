@@ -1,14 +1,13 @@
 import Footer from '@/components/Footer'
 import FounderHero from '@/components/founder/FounderHero'
-import GlobalAuthority from '@/components/founder/GlobalAuthority'
 import JourneySection from '@/components/founder/JourneySection'
 import MissionSection from '@/components/founder/MissionSection'
 import Navbar from '@/components/Navbar'
 import EvolveSection from '@/components/founder/EvolveSection'
 import React from 'react'
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa'
 import AchievementsSection from '@/components/founder/AchievementsSection'
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 const AboutFounder = () => {
   return (
@@ -35,10 +34,6 @@ const AboutFounder = () => {
 
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, delay: 0.1 }}>
           <AchievementsSection/>
-        </motion.div>
-        
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, delay: 0.1 }}>
-          <GlobalAuthority/>
         </motion.div>
         
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6, delay: 0.1 }}>

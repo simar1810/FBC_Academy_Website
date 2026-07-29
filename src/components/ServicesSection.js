@@ -97,7 +97,7 @@ const ServicesSection = () => {
       >
         <div className="text-sm md:text-md flex flex-col gap-3">
           <h2 className="text-4xl md:text-5xl font-bold font-playfair text-gray-900">
-            Real Results. <span className="text-[#67bc2a]">Real People.</span> Real Reversals.
+            Real People. <span className="text-[#67bc2a]">Real Results.</span> Real Impact
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl">
             We don't just track weight; we track quality of life. From C-Suite executives to "Household CEOs," here is the evidence of the FBC Method in action.

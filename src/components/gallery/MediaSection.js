@@ -1,26 +1,48 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useEffectEvent } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const mediaImages = [
-  "/images/media/media_1.jpg",
-  "/images/media/media_2.jpg",
-  "/images/media/media_3.jpg",
-  "/images/media/media_4.jpg",
-  "/images/media/media_5.jpg",
-  "/images/media/media_6.webp",
-  "/images/media/media_7.webp",
-  "/images/media/media_8.webp",
-  "/images/media/media_9.webp",
-  "/images/media/media_10.webp",
+const mediaItems = [
+  {
+    src: "/images/media/media_1.jpg",
+    outlet: "Times of India",
+  },
+  {
+    src: "/images/media/media_2.jpg",
+    outlet: "The Print",
+  },
+  {
+    src: "/images/media/media_2.jpg",
+    outlet: "The Print",
+  },
+  {
+    src: "/images/media/media_4.jpg",
+    outlet: "mid-day",
+  },
+  {
+    src: "/images/media/media_4.jpg",
+    outlet: "mid-day",
+  },
+  {
+    src: "/images/media/media_8.webp",
+    outlet: "mid-day Hindi",
+    blurred: true,
+  },
+  {
+    src: "/images/media/media_6.webp",
+    outlet: "Lokmat Times",
+  },
+  {
+    src: "/images/media/media_10.webp",
+    outlet: "Times of India",
+  },
 ];
 
 export default function MediaSection() {
   const [index, setIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
 
-  // ✅ Responsive logic
   useEffect(() => {
     const updateItems = () => {
       if (window.innerWidth < 640) setItemsPerPage(1);
@@ -33,12 +55,17 @@ export default function MediaSection() {
     return () => window.removeEventListener("resize", updateItems);
   }, []);
 
-  // ✅ Reset index on layout change
-  useEffect(() => {
+  const onItemsPerPageChange = useEffectEvent(() => {
     setIndex(0);
+  });
+
+  useEffect(() => {
+    onItemsPerPageChange();
   }, [itemsPerPage]);
 
-  const totalPages = Math.ceil(mediaImages.length / itemsPerPage);
+  const totalPages = Math.ceil(mediaItems.length / itemsPerPage);
+  const canPrev = index > 0;
+  const canNext = index < totalPages - 1;
 
   const nextSlide = () => {
     setIndex((prev) => Math.min(prev + 1, totalPages - 1));
@@ -49,30 +76,28 @@ export default function MediaSection() {
   };
 
   return (
-    <section className="py-20 bg-gray-50 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-
-        {/* HEADING */}
-        <h2 className="text-3xl md:text-5xl font-playfair font-bold mb-10 sm:mb-16">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#1142D4] mb-3">
+          Press Features
+        </p>
+        <h2 className="text-3xl md:text-5xl font-playfair font-bold mb-4">
           As Seen In <span className="text-[#67bc2a]">Media</span>
         </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-10 sm:mb-14">
+          Coverage across national publications featuring Fit Body Culture and Ankush S. Bhaskar.
+        </p>
 
-        {/* CAROUSEL */}
-        <div className="relative">
-
-          {/* TRACK */}
-          <div className="overflow-hidden">
+        <div className="relative px-0 sm:px-12">
+          <div className="overflow-hidden rounded-2xl">
             <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{
-                transform: `translateX(-${index * 100}%)`,
-              }}
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${index * 100}%)` }}
             >
               {Array.from({ length: totalPages }).map((_, pageIndex) => (
-                <div key={pageIndex} className="min-w-full px-2">
-                  
+                <div key={pageIndex} className="min-w-full px-1 sm:px-2">
                   <div
-                    className={`grid gap-6 ${
+                    className={`grid gap-5 ${
                       itemsPerPage === 1
                         ? "grid-cols-1"
                         : itemsPerPage === 2
@@ -80,77 +105,121 @@ export default function MediaSection() {
                         : "grid-cols-3"
                     }`}
                   >
-                    {mediaImages
+                    {mediaItems
                       .slice(
                         pageIndex * itemsPerPage,
                         pageIndex * itemsPerPage + itemsPerPage
                       )
-                      .map((src, i) => (
-                        <div
-                          key={i}
-                          className="relative rounded-xl overflow-hidden shadow-md group"
+                      .map((item, i) => (
+                        <article
+                          key={`${pageIndex}-${item.src}-${item.outlet}-${i}`}
+                          className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                         >
-                          <div className="relative w-full h-[300px] md:h-[400px]">
+                          <div className="relative w-full aspect-[3/4] sm:h-[360px] md:h-[420px] sm:aspect-auto">
                             <Image
-                              src={src}
-                              alt="media"
+                              src={item.src}
+                              alt={`${item.outlet} feature`}
                               fill
-                              className="object-cover transition duration-500 group-hover:scale-105"
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                              className={`object-cover object-top transition duration-500 group-hover:scale-[1.03] ${
+                                item.blurred ? "blur-md scale-105" : ""
+                              }`}
                             />
 
-                            {/* Overlay */}
-                            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition"></div>
+                            {item.blurred && (
+                              <div className="absolute inset-0 bg-white/25 backdrop-blur-[2px]" />
+                            )}
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-90" />
+
+                            <div className="absolute top-3 left-3">
+                              <span className="inline-flex items-center rounded-full bg-white/95 px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#1142D4] shadow-sm">
+                                {item.outlet}
+                              </span>
+                            </div>
+
+                            {item.blurred && (
+                              <div className="absolute inset-0 flex items-center justify-center">
+                                <span className="rounded-full bg-black/55 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
+                                  Preview blurred
+                                </span>
+                              </div>
+                            )}
                           </div>
-                        </div>
+                        </article>
                       ))}
                   </div>
-
                 </div>
               ))}
             </div>
           </div>
 
-          {/* LEFT BUTTON */}
           <button
+            type="button"
             onClick={prevSlide}
-            disabled={index === 0}
-            className={`absolute left-0 md:left-2 top-1/2 -translate-y-1/2 p-3 rounded-full shadow-md z-10 transition-transform
+            disabled={!canPrev}
+            aria-label="Previous media"
+            className={`absolute left-0 top-1/2 z-10 -translate-y-1/2 hidden sm:flex h-11 w-11 items-center justify-center rounded-full border transition
               ${
-                index === 0
-                  ? "bg-gray-200 opacity-50 cursor-not-allowed"
-                  : "bg-[#67bc2a] text-white hover:scale-110"
+                canPrev
+                  ? "border-[#1142D4] bg-[#1142D4] text-white hover:bg-blue-800 shadow-lg"
+                  : "border-gray-200 bg-gray-100 text-gray-400 cursor-not-allowed"
               }`}
           >
-            <FaChevronLeft size={18} />
+            <FaChevronLeft size={16} />
           </button>
 
-          {/* RIGHT BUTTON */}
           <button
+            type="button"
             onClick={nextSlide}
-            disabled={index === totalPages - 1}
-            className={`absolute right-0 md:right-2 top-1/2 -translate-y-1/2 p-3 rounded-full shadow-md z-10 transition-transform
+            disabled={!canNext}
+            aria-label="Next media"
+            className={`absolute right-0 top-1/2 z-10 -translate-y-1/2 hidden sm:flex h-11 w-11 items-center justify-center rounded-full border transition
               ${
-                index === totalPages - 1
-                  ? "bg-gray-200 opacity-50 cursor-not-allowed"
-                  : "bg-[#67bc2a] text-white hover:scale-110"
+                canNext
+                  ? "border-[#67bc2a] bg-[#67bc2a] text-white hover:bg-green-600 shadow-lg"
+                  : "border-gray-200 bg-gray-100 text-gray-400 cursor-not-allowed"
               }`}
           >
-            <FaChevronRight size={18} />
+            <FaChevronRight size={16} />
           </button>
         </div>
 
-        {/* DOTS (hidden on mobile) */}
-        <div className="hidden sm:flex justify-center mt-6 gap-2">
-          {Array.from({ length: totalPages }).map((_, i) => (
-            <div
-              key={i}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                i === index ? "bg-black scale-110" : "bg-gray-300"
-              }`}
-            />
-          ))}
-        </div>
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <button
+            type="button"
+            onClick={prevSlide}
+            disabled={!canPrev}
+            className="sm:hidden rounded-full border border-gray-300 px-3 py-2 text-sm disabled:opacity-40"
+          >
+            Prev
+          </button>
 
+          <div className="flex justify-center gap-2">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Go to page ${i + 1}`}
+                onClick={() => setIndex(i)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  i === index
+                    ? "w-8 bg-[#1142D4]"
+                    : "w-2.5 bg-gray-300 hover:bg-gray-400"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={nextSlide}
+            disabled={!canNext}
+            className="sm:hidden rounded-full border border-gray-300 px-3 py-2 text-sm disabled:opacity-40"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -19,23 +19,23 @@ export default function FounderHero() {
 
             {/* Sub-headline */}
            <p className="text-base md:text-sm text-gray-700 max-w-110 mx-auto md:mx-0">
-              Ankush S. Bhaskar Empowering high-stakes prefessionals through a unique fusion of
+              Ankush S. Bhaskar empowering high-stakes professionals through a unique fusion of
               elite fitness storytelling and scientific authority.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0 justify-center md:justify-start">
               <a
-                href=""
-                className="bg-[#1142D4] font-playfair text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-indigo-700 transition"
-              >
-                Read the story
-              </a>
-              <a
-                href=""
-                className="border font-playfair border-gray-300  px-6 py-3 rounded-md text-lg font-medium bg-[#67bc2a] text-white transition"
+                href="#credentials"
+                className="bg-[#1142D4] font-playfair text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-indigo-700 transition text-center"
               >
                 View Credentials
+              </a>
+              <a
+                href="/plans"
+                className="border font-playfair border-gray-300 px-6 py-3 rounded-md text-lg font-medium bg-[#67bc2a] text-white transition text-center"
+              >
+                Explore Programs
               </a>
             </div>
           </div>
@@ -81,11 +81,7 @@ export default function FounderHero() {
               </div> */}
               <div className="flex-1 overflow-hidden flex items-center">
             <span className="text-gray-500 font-medium "></span>
-            <Marquee gradient={true} gradientColor={[244, 247, 246]} speed={40} className="flex items-center">
-              <img src="/forbes.png" alt="Forbes" className="mx-8 h-12 object-contain" />
-              <img src="/gq.png" alt="GQ" className="mx-8 h-12 object-contain" />
-              <img src="/menshealth.png" alt="Men's Health" className="mx-8 h-12 object-contain" />
-              <img src="/vogue.png" alt="Vogue" className="mx-8 h-12 object-contain" />
+            <Marquee gradient={true} gradientColor={[255, 255, 255]} speed={40} className="flex items-center">
               <img src="/thetimes.png" alt="The Times" className="mx-8 h-12 object-contain" />
               <img src="/thetimesofindia.png" alt="The Times of India" className="mx-8 h-12 object-contain" />
               <img src="/mid-day.png" alt="mid-day" className="mx-8 h-12 object-contain" />

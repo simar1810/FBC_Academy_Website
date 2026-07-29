@@ -14,6 +14,10 @@ export default function Navbar() {
     { 
       label: "Programs", 
       path: "/plans",
+      dropdown: [
+        { label: "I Want to Get Fit", path: "/plans/get-fit" },
+        { label: "Become an Elite Coach", path: "/plans/elite-coach" },
+      ]
     },
     { 
       label: "Gallery", 

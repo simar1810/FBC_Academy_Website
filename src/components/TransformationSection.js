@@ -41,7 +41,7 @@ export default function TransformationSection() {
           </p>
 
           <a
-            href="/plans"
+            href="/plans/get-fit"
             className="bg-[#1142D4] hover:bg-blue-800 font-playfair px-6 py-3 rounded-md text-white font-semibold flex items-center justify-center gap-2 transition w-fit"
           >
             Explore Transformation Programs <FaArrowRight />
@@ -83,7 +83,7 @@ export default function TransformationSection() {
           </p>
 
           <a
-            href="/plans#fitness-coach-launchpad"
+            href="/plans/elite-coach"
             className="bg-[#67bc2a] hover:bg-green-600 font-playfair px-6 py-3 rounded-md text-white font-semibold flex items-center justify-center gap-2 transition w-fit"
           >
             Explore Fitness Coach Launchpad <FaArrowRight />

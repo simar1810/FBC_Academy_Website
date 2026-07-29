@@ -1,33 +1,30 @@
-import ContactHero from "@/components/contact/ContactHero";
-import Footer from "@/components/Footer";
+import ContactHero from "@/components/contact/ContactHero"
+import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
-import { FaWhatsapp } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { FaWhatsapp } from "react-icons/fa"
+import { WHATSAPP_URL } from "@/data/siteLinks"
 
-const ContactUs = () =>{
-    return(
-        <>
-          <Navbar/>
+const ContactUs = () => {
+  return (
+    <>
+      <Navbar />
 
-          <a
-            href="https://wa.me/919923646881?text=Hey%2C%20I%27m%20interested%20in%20your%20coaching%20programs%21"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fixed right-4 bottom-12 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-50"
-            aria-label="Chat on WhatsApp"
-         >
-            <FaWhatsapp className="w-6 h-6" />
-        </a>
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed right-4 bottom-12 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-[60]"
+        aria-label="Chat on WhatsApp"
+      >
+        <FaWhatsapp className="w-6 h-6" />
+      </a>
 
-          <main className="pt-16 overflow-hidden">
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6 }}>
-              <ContactHero/>
-            </motion.div>
-            <Footer/>
-          </main>
-
-        </>
-    )
+      <main className="pt-16 overflow-hidden">
+        <ContactHero />
+        <Footer />
+      </main>
+    </>
+  )
 }
 
-export default ContactUs;
+export default ContactUs

@@ -15,8 +15,7 @@ const Gallery = () =>
           <Navbar/>
 
            <a
-            // href="https://wa.me/9625691566?text=Hey%2C%20I%27m%20here%20from%20your%20website%21"
-            href = "#"
+            href="https://wa.me/919923646881?text=Hey%2C%20I%27m%20interested%20in%20your%20coaching%20programs%21"
             target="_blank"
             rel="noopener noreferrer"
             className="fixed right-4 bottom-12 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-50"
@@ -26,7 +25,9 @@ const Gallery = () =>
          </a>
 
           <main className="pt-16">
-            <GalleryHero/>
+            <GalleryHero
+              subtitle="Before-and-after proof from clients who followed the FBC Method through work, travel, and real-life constraints."
+            />
             <BodyJournal/>
             <CandidSection/>
             <LimitedAvailability/>

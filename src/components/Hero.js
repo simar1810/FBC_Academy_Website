@@ -39,7 +39,7 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/plans"
+                href="/plans/get-fit"
                 className="bg-[#1142D4] text-white px-6 py-3 font-playfair rounded-md text-lg font-medium hover:bg-blue-800 transition"
               >
                 I Want to Get Fit
@@ -47,7 +47,7 @@ export default function Hero() {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="/plans#fitness-coach-launchpad"
+                href="/plans/elite-coach"
                 className="text-white bg-[#67bc2a] px-6 py-3 font-playfair rounded-md text-lg font-medium hover:bg-green-600 transition"
               >
                 Become an Elite Coach

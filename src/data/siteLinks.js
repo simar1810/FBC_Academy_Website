@@ -14,16 +14,18 @@ export const SOCIAL_LINKS = {
 export const APP_STORE_URL =
   "https://apps.apple.com/in/app/fbc-academy/id6757097093"
 
+/** Total Body Re-Set published book on Amazon India */
+export const TBR_AMAZON_URL = "https://www.amazon.in/dp/B0H1X3QQ2K"
+
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.wellnessz.fitbody&hl=en_IN"
 
-/**
- * Buying-page URLs for each premium eBook.
- * Leave empty until the purchase links are shared; form still collects leads.
- */
+/** Buying-page URLs for each premium eBook */
 export const EBOOK_PURCHASE_URLS = {
-  "why-professionals-fail": "",
-  "busy-professional-guide": "",
+  "why-professionals-fail":
+    "https://superprofile.bio/vp/why-75--busy-professionals-fail-at-fitness---how-to-fix-it",
+  "busy-professional-guide":
+    "https://superprofile.bio/vp/the-busy-professional-s-ultimate-guide-to-losing-5-10-kgs-without-the-gym",
 }
 
 export const EBOOKS = [

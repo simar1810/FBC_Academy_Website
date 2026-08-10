@@ -127,9 +127,6 @@ const PerformanceCTA = () => {
           </button>
         </form>
 
-        <p className="mt-4 text-xs text-white/80 text-center">
-          LEAD CAPTURE → PURCHASE PAGE REDIRECT
-        </p>
       </div>
     </section>
   )

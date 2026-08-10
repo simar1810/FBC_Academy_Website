@@ -18,6 +18,12 @@ const images = [
   "/images/candid/candid_12.png",
   "/images/candid/candid_13.jpg",
   "/images/candid/candid_14.jpg",
+  "/images/candid/candid_15.jpg",
+  "/images/candid/candid_16.jpg",
+  "/images/candid/candid_17.jpg",
+  "/images/candid/candid_18.jpg",
+  "/images/candid/candid_19.jpg",
+  "/images/candid/candid_20.jpg",
 ];
 
 export default function CandidSection() {

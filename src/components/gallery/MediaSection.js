@@ -34,6 +34,10 @@ const mediaItems = [
     outlet: "Lokmat Times",
   },
   {
+    src: "/images/media/media_11.jpg",
+    outlet: "Lokmat Times Online",
+  },
+  {
     src: "/images/media/media_10.webp",
     outlet: "Times of India",
   },

@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 
 const LatestResearch = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-10 py-20 relative">
+    <section id="blogs" className="max-w-7xl mx-auto px-4 md:px-10 py-20 relative scroll-mt-20">
 
       {/* Header */}
       <div className="text-center mb-12">

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import { FaWhatsapp } from 'react-icons/fa';
+import { WHATSAPP_URL } from "@/data/siteLinks";
 
 
 const RefundPolicy = () => {
@@ -9,8 +10,7 @@ const RefundPolicy = () => {
       <Navbar />
 
        <a
-        // href="https://wa.me/9625691566?text=Hey%2C%20I%27m%20here%20from%20your%20website%21"
-        href = "#"
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed right-4 bottom-12 bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform z-50"

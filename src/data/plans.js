@@ -1,6 +1,7 @@
 export const PLAN_LANDING_PAGES = {
-  "7-day-kickstarter": "", // LP URL to be shared
-  "28-day-foundation": "", // LP URL to be shared
+  "7-day-kickstarter": "https://superprofile.bio/vp/7-days-kickstart",
+  "28-day-foundation":
+    "https://superprofile.bio/vp/total-body-re-set-30-days-body-energy-reboot",
   "total-body-reset-diy": "", // LP URL to be shared
   "total-body-reset-hybrid": null, // enquiry form
   "fitness-coach-launchpad": "", // LP URL to be shared

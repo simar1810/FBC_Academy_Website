@@ -77,6 +77,35 @@ const gallery = [
   "/images/achievements/achievement_7.jpg",
   "/images/achievements/achievement_9.jpg",
   "/images/achievements/achievement_10.jpg",
+  "/images/achievements/achievement_13.jpg",
+  "/images/achievements/achievement_14.jpg",
+];
+
+const keynotePhotos = [
+  {
+    src: "/images/founder/keynote_1.jpg",
+    alt: "Ankush S Bhaskar delivering the keynote at Trainers Growth Conclave, Dubai",
+  },
+  {
+    src: "/images/founder/keynote_2.jpg",
+    alt: "Ankush S Bhaskar presenting frameworks on stage in Dubai",
+  },
+  {
+    src: "/images/founder/keynote_3.jpg",
+    alt: "Audience of fitness trainers at the Trainers Growth Conclave, Dubai",
+  },
+];
+
+const actingWork = [
+  {
+    src: "/images/founder/acting_1.jpg",
+    caption: "Colors TV: Pinjara Khubsurti Ka",
+  },
+  { src: "/images/founder/acting_2.jpg", caption: "Cuffed (MX Player)" },
+  { src: "/images/founder/acting_3.jpg", caption: "Twisted 2 (Web Series)" },
+  { src: "/images/founder/acting_4.jpg", caption: "mid-day Press Coverage" },
+  { src: "/images/founder/acting_5.jpg", caption: "On Set" },
+  { src: "/images/founder/acting_6.jpg", caption: "Character Work" },
 ];
 
 export default function AchievementsSection() {
@@ -128,6 +157,65 @@ export default function AchievementsSection() {
                 </div>
               </article>
             ))}
+        </div>
+
+        {/* Keynote in action — Trainers Growth Conclave, Dubai */}
+        <div className="mb-14">
+          <div className="text-center mb-6">
+            <h3 className="font-playfair text-2xl font-bold text-gray-900">
+              Keynote in Action: Trainers Growth Conclave, Dubai
+            </h3>
+            <p className="mt-2 text-gray-600 text-sm md:text-base">
+              On stage coaching the coaches: real frames from the Dubai keynote.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            {keynotePhotos.map((photo) => (
+              <div
+                key={photo.src}
+                className="relative aspect-[3/2] overflow-hidden rounded-xl border border-gray-200 bg-gray-100"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Acting work */}
+        <div className="mb-14">
+          <div className="text-center mb-6">
+            <h3 className="font-playfair text-2xl font-bold text-gray-900">
+              Beyond Coaching: On Screen
+            </h3>
+            <p className="mt-2 text-gray-600 text-sm md:text-base">
+              Television and web series work, including Colors TV and MX Player
+              projects.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {actingWork.map((item) => (
+              <figure key={item.src} className="group">
+                <div className="relative aspect-square overflow-hidden rounded-xl border border-gray-200 bg-gray-100">
+                  <Image
+                    src={item.src}
+                    alt={item.caption}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 17vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="mt-2 text-xs text-gray-500 text-center">
+                  {item.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
 
         {/* Additional recognition gallery — contain, never crop posters */}

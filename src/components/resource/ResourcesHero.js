@@ -68,10 +68,13 @@ const ResourcesHero = () => {
               <span className="block">output.</span>
             </p>
 
-            <p className="font-semibold text-black cursor-pointer hover:opacity-70 transition">
-              Read Full Journal{" "}
-              <span className="text-gray-500">→ 12 Mins Read</span>
-            </p>
+            <a
+              href="#blogs"
+              className="font-semibold text-black cursor-pointer hover:opacity-70 transition"
+            >
+              Explore the Blog{" "}
+              <span className="text-gray-500">→ Latest Articles</span>
+            </a>
 
           </div>
 
